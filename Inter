@@ -1,0 +1,13 @@
+return LayoutBuilder(
+        builder: (context, constraints) {
+          double parentHeight = constraints.maxHeight;
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              InkWell(
+                borderRadius: BorderRadius.circular(5),
+                onTap: () {
+                  if (int.parse(controller.text) > 0) {
+                    updateValue((int.parse(controller.text) - 1));
+                  }
